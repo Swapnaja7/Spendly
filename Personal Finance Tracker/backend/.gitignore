@@ -13,16 +13,14 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 
-# Build outputs
-dist/
-build/
-.next/
-out/
-coverage/
-
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
 # Runtime data
 pids
@@ -31,6 +29,7 @@ pids
 *.pid.lock
 
 # Coverage directory used by tools like istanbul
+coverage/
 *.lcov
 
 # nyc test coverage
@@ -54,12 +53,8 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# parcel-bundler cache
-.cache
-.parcel-cache
-
-# Vite cache
-.vite/
+# dotenv environment variables file
+.env.test
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
@@ -103,6 +98,50 @@ public/uploads/
 
 # PM2
 .pm2/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+.tmp/
+.temp/
 
 # Test files (if you want to exclude them)
 # test-*.js
@@ -174,23 +213,10 @@ service-account-key.json
 # Netlify
 .netlify/
 
-# Storybook build outputs
-storybook-static
-.out
-.storybook-out
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Gatsby files
-.cache/
-public
+# Build artifacts
+build/
+dist/
+out/
 
 # Package manager files
 package-lock.json
@@ -206,27 +232,3 @@ pnpm-lock.yaml
 *.njsproj
 *.sln
 *.sw?
-
-# OS specific
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# macOS
-.AppleDouble
-.LSOverride
-Icon
-._*
-
-# Linux
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
-
-# Temporary folders
-.tmp/
-.temp/
